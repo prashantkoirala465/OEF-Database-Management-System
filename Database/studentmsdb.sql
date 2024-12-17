@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `tbladmin` (
-  `ID` int(10) NOT NULL,
+  `ID` int(10) NOT NULL,                                                // Dont know
   `AdminName` varchar(120) DEFAULT NULL,
   `UserName` varchar(120) DEFAULT NULL,
   `MobileNumber` bigint(10) DEFAULT NULL,
