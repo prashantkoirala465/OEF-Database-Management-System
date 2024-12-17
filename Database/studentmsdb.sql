@@ -84,7 +84,7 @@ CREATE TABLE `tblnotice` (
   `ClassId` int(10) DEFAULT NULL,
   `NoticeMsg` mediumtext DEFAULT NULL,
   `CreationDate` timestamp NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;   // i dont know this 
 
 --
 -- Dumping data for table `tblnotice`
