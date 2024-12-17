@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 12, 2024 at 06:48 PM
+-- Generation Time: Dec 17, 2024 at 04:06 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `studentmsdb`
+-- Database: `oefmsdb`
 --
 
 -- --------------------------------------------------------
@@ -42,7 +42,7 @@ CREATE TABLE `tbladmin` (
 --
 
 INSERT INTO `tbladmin` (`ID`, `AdminName`, `UserName`, `MobileNumber`, `Email`, `Password`, `AdminRegdate`) VALUES
-(1, 'Aarati', 'admin', 8979555558, 'aarati@gmail.com', '728a7e0d5488e5cbea14dbb88984a9f1', '2019-10-11 04:36:52');
+(1, 'Aarati', 'aarati65', 8979555558, 'aarati@gmail.com', '728a7e0d5488e5cbea14dbb88984a9f1', '2024-11-11 04:36:52');
 
 -- --------------------------------------------------------
 
@@ -62,15 +62,7 @@ CREATE TABLE `tblclass` (
 --
 
 INSERT INTO `tblclass` (`ID`, `ClassName`, `Section`, `CreationDate`) VALUES
-(1, '10', 'A', '2022-01-13 10:42:14'),
-(2, '10', 'B', '2022-01-13 10:42:35'),
-(3, '10', 'C', '2022-01-13 10:42:41'),
-(4, '11', 'A', '2022-01-13 10:42:47'),
-(5, '11', 'B', '2022-01-13 10:42:52'),
-(6, '11', 'C', '2022-01-13 10:42:57'),
-(7, '11', 'D', '2022-01-13 10:43:04'),
-(8, '12', 'A', '2022-01-13 10:43:10'),
-(9, '12', 'C', '2022-01-13 10:43:15');
+(1, 'IELTS', 'A', '2024-11-13 10:43:15');
 
 -- --------------------------------------------------------
 
@@ -91,12 +83,10 @@ CREATE TABLE `tblnotice` (
 --
 
 INSERT INTO `tblnotice` (`ID`, `NoticeTitle`, `ClassId`, `NoticeMsg`, `CreationDate`) VALUES
-(2, 'Marks of Unit Test.', 3, 'Meet your class teacher for seeing copies of unit test', '2022-01-19 06:35:58'),
-(3, 'Marks of Unit Test.', 2, 'Meet your class teacher for seeing copies of unit test', '2022-01-19 06:35:58'),
-(4, 'Test', 3, 'This is for testing.', '2022-02-02 18:17:03'),
-(5, 'Test Notice', 8, 'This is for Testing.', '2022-02-02 19:03:43'),
 (6, 'Your Document has been verified, please collect from consellor office!', 1, 'Hello Student Your Document has been verified, please collect from consellor office!', '2024-12-12 15:22:55'),
-(7, 'Your Document has been verified, please collect from consellor office!', 8, 'Hello Dear Student, Your Document has been verified, please collect from consellor office!', '2024-12-12 15:29:12');
+(7, 'Your Document has been verified, please collect from consellor office!', 8, 'Hello Dear Student, Your Document has been verified, please collect from consellor office!', '2024-12-12 15:29:12'),
+(8, 'Your Document has been verified, please collect from consellor office!', 9, 'Hello, Anupam Your Document has arrived!', '2024-12-13 04:25:48'),
+(9, 'Your Document has been verified, please collect from consellor office!', 1, 'Dear Anupam, Your Document has been verified! You can collect it from my office! Thankyou', '2024-12-16 01:39:41');
 
 -- --------------------------------------------------------
 
@@ -181,12 +171,7 @@ CREATE TABLE `tblstudent` (
 --
 
 INSERT INTO `tblstudent` (`ID`, `StudentName`, `StudentEmail`, `StudentClass`, `Gender`, `DOB`, `StuID`, `FatherName`, `MotherName`, `ContactNumber`, `AltenateNumber`, `Address`, `UserName`, `Password`, `Image`, `DateofAdmission`) VALUES
-(1, 'jghj', 'jhghjg@gmail.com', '4', 'Male', '2022-01-13', 'ui-99', 'bbmnb', 'mnbmb', 5465454645, 4646546565, 'J-908, Hariram Nagra New Delhi', 'kjhkjh', '202cb962ac59075b964b07152d234b70', 'ebcd036a0db50db993ae98ce380f64191642082944.png', '2022-01-13 14:09:04'),
-(2, 'Kishore Sharma', 'kishore@gmail.com', '3', 'Male', '2019-01-05', '10A12345', 'Janak Sharma', 'Indra Devi', 7879879879, 7987979879, 'kjhkhjkhdkshfiludzshfiu\r\nfjedh\r\nk;jk', 'kishore2019', '202cb962ac59075b964b07152d234b70', '5bede9f47102611b4df6241c718af7fc1642314213.jpg', '2022-01-16 06:23:33'),
-(3, 'Anshul', 'anshul@gmali.com', '2', 'Female', '1986-01-05', 'uii-990', 'Kailesg', 'jakinnm', 4646546546, 6546598798, 'jlkjkljoiujiouoil', 'anshul1986', '202cb962ac59075b964b07152d234b70', '4f0691cfe48c8f74fe413c7b92391ff41642605892.jpg', '2022-01-19 15:24:52'),
-(4, 'John Doe', 'john@gmail.com', '1', 'Female', '2002-02-10', '10806121', 'Anuj Kumar', 'Garima Singh', 1234698741, 1234567890, 'New Delhi', 'john12', 'f925916e2754e5e03f75dd58a5733251', 'ebcd036a0db50db993ae98ce380f64191643825985.png', '2022-02-02 18:19:45'),
-(5, 'Anuj kumar Singh', 'akkr@gmail.com', '8', 'Male', '2001-05-30', '1080623', 'Bijendra Singh', 'Kamlesh Devi', 1472589630, 1236987450, 'New Delhi', 'anujk3', 'f925916e2754e5e03f75dd58a5733251', '2f413c4becfa2db4bc4fc2ccead84f651643828242.png', '2022-02-02 18:57:22'),
-(6, 'Anupam Pokhrel', 'anupampokhrel@gmail.com', '9', 'Male', '2004-02-24', 'Anupam65', 'Bijay Pokhrel', 'Yagya Kumari Bakhrel', 9847504383, 9841150343, 'Aloknagar - 31, Kathmandu', 'anupam65', 'd0936a48f70bfe7afc6be6683f53dfe6', '387111713accecfedc9c46dc3d61073a1734023017.png', '2024-12-12 17:03:37');
+(1, 'Anupam Pokhrel', 'anupampokhrel@gmail.com', '1', 'Male', '2004-02-24', 'Anupam65', 'Bijay Pokhrel', 'Yagya Kumari Bakhrel', 9847504383, 9841150343, 'Aloknagar - 31, Kathmandu', 'anupam65', 'd0936a48f70bfe7afc6be6683f53dfe6', '387111713accecfedc9c46dc3d61073a1734023017.png', '2024-12-12 17:03:37');
 
 --
 -- Indexes for dumped tables
@@ -248,7 +233,7 @@ ALTER TABLE `tblclass`
 -- AUTO_INCREMENT for table `tblnotice`
 --
 ALTER TABLE `tblnotice`
-  MODIFY `ID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `ID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `tblpage`
