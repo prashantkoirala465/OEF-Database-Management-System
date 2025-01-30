@@ -142,24 +142,12 @@ Admin:
 - Document verification status
 - Password management
 
-## Study Abroad Programs
-The system currently supports programs in:
-- Japan
-- USA
-- Canada
-- Germany
-- Australia
-- New Zealand
-- United Kingdom
-- South Korea
-- France
-- Sweden
 
 ## Contributing
 This project was developed as part of DATA 210 coursework. For any improvements or bug fixes, please submit a pull request.
 
 ## Support
-For technical support or queries, contact the development team through the university's DATA 210 course coordinators.
+For technical support or queries, contact: prashantkoirala465@gmail.com
 
 ## License
 This project is part of academic coursework and should be used accordingly.
